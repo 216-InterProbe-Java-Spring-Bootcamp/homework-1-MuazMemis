@@ -28,16 +28,28 @@ public class ProductController {
     }
 
     // Son kullanma tarihi geçmemiş yada son kullanma tarihi null olan ürünleri listeler
-    @GetMapping("/getAllByExpirationDateIsGreaterThanOrExpirationDateIsNull")
-    public List<Product> findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(
-            @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date date) {
-        return productDao.findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(date);
+//    @GetMapping("/getAllByExpirationDateIsGreaterThanOrExpirationDateIsNull")
+//    public List<Product> findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(
+//            @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date date) {
+//        return productDao.findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(date);
+//    }
+
+    // Son kullanma tarihi geçmemiş yada son kullanma tarihi null olan ürünleri listeler
+    @GetMapping("/getAllByNotExpiredOrExpirationDateIsNull")
+    public List<Product> findAllByNotExpiredOrExpirationDateIsNull() {
+        return productDao.findAllByNotExpiredOrExpirationDateIsNull();
     }
 
     // Son kullanma tarihi geçmiş ürünleri listeler
-    @GetMapping("/getAllByExpirationDateIsLessThan")
-    public List<Product> findAllByExpirationDateIsLessThan(
-            @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date date) {
-        return productDao.findAllByExpirationDateIsLessThan(date);
+//    @GetMapping("/getAllByExpirationDateIsLessThan")
+//    public List<Product> findAllByExpirationDateIsLessThan(
+//            @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date date) {
+//        return productDao.findAllByExpirationDateIsLessThan(date);
+//    }
+
+    // Son kullanma tarihi geçmiş ürünleri listeler
+    @GetMapping("/getAllByExpiredDate")
+    public List<Product> findAllByExpiredDate() {
+        return productDao.findAllByExpiredDate();
     }
 }
