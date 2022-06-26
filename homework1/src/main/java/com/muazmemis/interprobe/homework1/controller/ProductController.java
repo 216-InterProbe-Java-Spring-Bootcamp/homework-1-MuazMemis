@@ -2,9 +2,9 @@ package com.muazmemis.interprobe.homework1.controller;
 
 import com.muazmemis.interprobe.homework1.dao.ProductDao;
 import com.muazmemis.interprobe.homework1.entity.Product;
-import com.muazmemis.interprobe.homework1.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -17,39 +17,25 @@ public class ProductController {
 
     private final ProductDao productDao;
 
-    @PostMapping
-    public Product save(@RequestBody Product product) {
-        return productDao.save(product);
+    @PostMapping()
+    public ResponseEntity<Product> save(@RequestBody Product product) {
+        return ResponseEntity.ok(productDao.save(product));
     }
 
-    @GetMapping
-    public List<Product> findAll() {
-        return productDao.findAll();
+    @GetMapping()
+    public ResponseEntity<List<Product>> findAll() {
+        return ResponseEntity.ok(productDao.findAll());
     }
 
-    // Son kullanma tarihi geçmemiş yada son kullanma tarihi null olan ürünleri listeler
-//    @GetMapping("/getAllByExpirationDateIsGreaterThanOrExpirationDateIsNull")
-//    public List<Product> findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(
-//            @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date date) {
-//        return productDao.findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(date);
-//    }
-
-    // Son kullanma tarihi geçmemiş yada son kullanma tarihi null olan ürünleri listeler
-    @GetMapping("/getAllByNotExpiredOrExpirationDateIsNull")
-    public List<Product> findAllByNotExpiredOrExpirationDateIsNull() {
-        return productDao.findAllByNotExpiredOrExpirationDateIsNull();
+    @GetMapping("/expiredorexpirationdateisnull/{date}")
+    public ResponseEntity<List<Product>> findAllByNotExpiredOrExpirationDateIsNull(
+            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
+        return ResponseEntity.ok(productDao.findAllByNotExpiredOrExpirationDateIsNull(date));
     }
 
-    // Son kullanma tarihi geçmiş ürünleri listeler
-//    @GetMapping("/getAllByExpirationDateIsLessThan")
-//    public List<Product> findAllByExpirationDateIsLessThan(
-//            @RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") Date date) {
-//        return productDao.findAllByExpirationDateIsLessThan(date);
-//    }
-
-    // Son kullanma tarihi geçmiş ürünleri listeler
-    @GetMapping("/getAllByExpiredDate")
-    public List<Product> findAllByExpiredDate() {
-        return productDao.findAllByExpiredDate();
+    @GetMapping("/expireddate/{date}")
+    public ResponseEntity<List<Product>> findAllByExpiredDate(
+            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
+        return ResponseEntity.ok(productDao.findAllByExpiredDate(date));
     }
 }

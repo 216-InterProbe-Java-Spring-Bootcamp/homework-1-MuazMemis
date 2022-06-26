@@ -4,23 +4,18 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "PRODUCTS")
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","productComments"})
 public class Product {
 
@@ -39,12 +34,12 @@ public class Product {
     @Temporal(TemporalType.DATE)
     private Date expirationDate;
 
-//    @JsonIgnore
+    @JsonIgnore
     @OneToMany(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
             mappedBy = "product"
     )
-    private List<ProductComment> productComments;
+    private Set<ProductComment> productComments = new HashSet<>();;
 
 }

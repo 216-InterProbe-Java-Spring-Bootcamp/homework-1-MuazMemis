@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "elma",
+    "price": 2.3,
+    "expirationDate": "2022-06-18"
+  },
+  {
+    "id": 2,
+    "name": "armut",
+    "price": 7.3,
+    "expirationDate": "2022-06-25"
+  },
+  {
+    "id": 4,
+    "name": "salatalık",
+    "price": 10,
+    "expirationDate": "2022-06-26"
+  },
+  {
+    "id": 5,
+    "name": "nar",
+    "price": 10,
+    "expirationDate": "2022-06-17"
+  },
+  {
+    "id": 52,
+    "name": "kivi",
+    "price": 15,
+    "expirationDate": null
+  },
+  {
+    "id": 53,
+    "name": "ayva",
+    "price": 12,
+    "expirationDate": null
+  },
+  {
+    "id": 54,
+    "name": "ananas",
+    "price": 25,
+    "expirationDate": null
+  },
+  {
+    "id": 3,
+    "name": "string",
+    "price": 0,
+    "expirationDate": "2022-06-20"
+  },
+  {
+    "id": 102,
+    "name": "domates",
+    "price": 100,
+    "expirationDate": "2022-06-25"
+  }
+]

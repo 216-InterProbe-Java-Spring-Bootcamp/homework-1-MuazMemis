@@ -9,14 +9,9 @@ import java.util.List;
 
 public interface ProductDao extends JpaRepository<Product, Long> {
 
-//    List<Product> findAllByExpirationDateIsGreaterThanOrExpirationDateIsNull(Date date);
+    @Query("FROM Product WHERE expirationDate >= :date or expirationDate is null")
+    List<Product> findAllByNotExpiredOrExpirationDateIsNull(Date date);
 
-    @Query(value = "SELECT * FROM products p WHERE p.expiration_date >= CURRENT_DATE or p.expiration_date is null",
-            nativeQuery = true)
-    List<Product> findAllByNotExpiredOrExpirationDateIsNull();
-
-//    List<Product> findAllByExpirationDateIsLessThan(Date date);
-
-    @Query(value = "SELECT * FROM products p WHERE p.expiration_date < CURRENT_DATE", nativeQuery = true)
-    List<Product> findAllByExpiredDate();
+    @Query("FROM Product WHERE expirationDate < :date")
+    List<Product> findAllByExpiredDate(Date date);
 }

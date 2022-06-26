@@ -1,0 +1,164 @@
+[
+  {
+    "id": 6,
+    "comment": "string",
+    "commentDate": "2022-06-20",
+    "product": {
+      "id": 2,
+      "name": "armut",
+      "price": 7.3,
+      "expirationDate": "2022-06-25"
+    },
+    "user": {
+      "id": 2,
+      "name": "muaz2",
+      "surname": "memis2",
+      "email": "muaz2@gmail.com",
+      "phoneNumber": "5338569611"
+    }
+  },
+  {
+    "id": 7,
+    "comment": "güzel",
+    "commentDate": "2022-06-22",
+    "product": {
+      "id": 2,
+      "name": "armut",
+      "price": 7.3,
+      "expirationDate": "2022-06-25"
+    },
+    "user": {
+      "id": 2,
+      "name": "muaz2",
+      "surname": "memis2",
+      "email": "muaz2@gmail.com",
+      "phoneNumber": "5338569611"
+    }
+  },
+  {
+    "id": 8,
+    "comment": "bayat",
+    "commentDate": "2022-06-25",
+    "product": {
+      "id": 2,
+      "name": "armut",
+      "price": 7.3,
+      "expirationDate": "2022-06-25"
+    },
+    "user": {
+      "id": 2,
+      "name": "muaz2",
+      "surname": "memis2",
+      "email": "muaz2@gmail.com",
+      "phoneNumber": "5338569611"
+    }
+  },
+  {
+    "id": 9,
+    "comment": "taze",
+    "commentDate": "2022-06-25",
+    "product": {
+      "id": 2,
+      "name": "armut",
+      "price": 7.3,
+      "expirationDate": "2022-06-25"
+    },
+    "user": {
+      "id": 1,
+      "name": "muaz",
+      "surname": "memis",
+      "email": "muaz@gmail.com",
+      "phoneNumber": "5338569632"
+    }
+  },
+  {
+    "id": 10,
+    "comment": "taze 2",
+    "commentDate": "2022-06-10",
+    "product": {
+      "id": 2,
+      "name": "armut",
+      "price": 7.3,
+      "expirationDate": "2022-06-25"
+    },
+    "user": {
+      "id": 1,
+      "name": "muaz",
+      "surname": "memis",
+      "email": "muaz@gmail.com",
+      "phoneNumber": "5338569632"
+    }
+  },
+  {
+    "id": 11,
+    "comment": "ender",
+    "commentDate": "2022-06-09",
+    "product": {
+      "id": 5,
+      "name": "nar",
+      "price": 10,
+      "expirationDate": "2022-06-17"
+    },
+    "user": {
+      "id": 1,
+      "name": "muaz",
+      "surname": "memis",
+      "email": "muaz@gmail.com",
+      "phoneNumber": "5338569632"
+    }
+  },
+  {
+    "id": 12,
+    "comment": "leziz",
+    "commentDate": "2022-06-19",
+    "product": {
+      "id": 5,
+      "name": "nar",
+      "price": 10,
+      "expirationDate": "2022-06-17"
+    },
+    "user": {
+      "id": 1,
+      "name": "muaz",
+      "surname": "memis",
+      "email": "muaz@gmail.com",
+      "phoneNumber": "5338569632"
+    }
+  },
+  {
+    "id": 53,
+    "comment": "string 2",
+    "commentDate": "2022-06-27",
+    "product": {
+      "id": 3,
+      "name": "string",
+      "price": 0,
+      "expirationDate": "2022-06-20"
+    },
+    "user": {
+      "id": 3,
+      "name": "string",
+      "surname": "string",
+      "email": "string@string.com",
+      "phoneNumber": "string"
+    }
+  },
+  {
+    "id": 102,
+    "comment": "harika bir laptop",
+    "commentDate": "2022-06-30",
+    "product": {
+      "id": 102,
+      "name": "domates",
+      "price": 100,
+      "expirationDate": "2022-06-25"
+    },
+    "user": {
+      "id": 52,
+      "name": "halil",
+      "surname": "halil",
+      "email": "halil@gmail.com",
+      "phoneNumber": "561545453"
+    }
+  }
+]

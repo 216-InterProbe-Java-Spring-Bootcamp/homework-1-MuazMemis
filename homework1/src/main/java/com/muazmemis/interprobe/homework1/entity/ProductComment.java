@@ -1,8 +1,6 @@
 package com.muazmemis.interprobe.homework1.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -12,8 +10,6 @@ import java.util.Date;
 @Table(name = "PRODUCT_COMMENTS")
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class ProductComment {
 
     @Id

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "muaz",
+    "surname": "memis",
+    "email": "muaz@gmail.com",
+    "phoneNumber": "5338569632"
+  },
+  {
+    "id": 2,
+    "name": "muaz2",
+    "surname": "memis2",
+    "email": "muaz2@gmail.com",
+    "phoneNumber": "5338569611"
+  },
+  {
+    "id": 3,
+    "name": "string",
+    "surname": "string",
+    "email": "string@string.com",
+    "phoneNumber": "string"
+  },
+  {
+    "id": 52,
+    "name": "halil",
+    "surname": "halil",
+    "email": "halil@gmail.com",
+    "phoneNumber": "561545453"
+  }
+]

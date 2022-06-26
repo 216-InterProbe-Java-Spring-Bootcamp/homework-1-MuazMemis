@@ -3,6 +3,7 @@ package com.muazmemis.interprobe.homework1.controller;
 import com.muazmemis.interprobe.homework1.dao.UserDao;
 import com.muazmemis.interprobe.homework1.entity.User;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,14 +15,14 @@ public class UserController {
 
     private final UserDao userDao;
 
-    @PostMapping
-    public User save(@RequestBody User user) {
-        return userDao.save(user);
+    @PostMapping()
+    public ResponseEntity<User> save(@RequestBody User user) {
+        return ResponseEntity.ok(userDao.save(user));
     }
 
-    @GetMapping
-    public List<User> findAll() {
-        return userDao.findAll();
+    @GetMapping()
+    public ResponseEntity<List<User>> findAll() {
+        return ResponseEntity.ok(userDao.findAll());
     }
 
 }
